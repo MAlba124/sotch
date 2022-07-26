@@ -27,7 +27,7 @@ def main() -> int:
         args: argparse.Namespace = init_args()
         apikey: str = args.key if args.key != None else D_API_KEY
 
-        api: shodan.client.Shodan = shodan.Shodan(D_API_KEY)
+        api: shodan.client.Shodan = shodan.Shodan(apikey)
 
         # Just for keeping count :)
         total_proxies_found: int = 0
